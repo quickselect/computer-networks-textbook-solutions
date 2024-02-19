@@ -1,3 +1,1 @@
-# computer-networks-by-peterson-in-java
-functionally equivalent.
-
+for self-study
