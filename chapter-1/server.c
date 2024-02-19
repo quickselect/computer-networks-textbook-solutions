@@ -32,14 +32,14 @@ int main() {
 	listen(s, MAX_PENDING);
 
 	/* wait for connection, then receive and print text */
-while(1) {
-if ((new_s = accept(s, (struct sockaddr *)&sin, &addr_len)) < 0)
-{
-perror("simplex-talk: accept");
-exit(1);
-}
-while (buf_len = recv(new_s, buf, sizeof(buf), 0))
-fputs(buf, stdout);
-close(new_s);
-}
+  while(1) {
+    if ((new_s = accept(s, (struct sockaddr *)&sin, &addr_len)) < 0)
+    {
+      perror("simplex-talk: accept");
+      exit(1);
+    }
+    while (buf_len = recv(new_s, buf, sizeof(buf), 0))
+      fputs(buf, stdout);
+    close(new_s);
+  }
 }
