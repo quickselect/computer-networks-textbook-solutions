@@ -5,3 +5,8 @@ for debian:
 # for netinet
 sudo apt-get install libsctp-dev
 ```
+
+and start the client after compiling with:
+```bash
+./client.out "127.0.0.1"
+```
