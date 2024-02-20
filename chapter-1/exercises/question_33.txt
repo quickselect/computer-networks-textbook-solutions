@@ -1,0 +1,9 @@
+- What happens to these 10 clients? Do their connect()s fail, time out, or succeed? Do any
+other calls block?
++ The first call blocks the others.
+- Now let the first client exit. What happens? 
++ The second one now is able to talk. The server only lets one client to able to talk with it it seems.
+- Try this with the server value MAX_PENDING set to 1 as well.
++ It acts the same way?. I expected that it would throw error of some kind but nope.
+I looked at the documentation of listen() it says that client may receive an error with an indication of ECONNREFUSED or, if the underlying protocol supports retransmission, the request may be ignored so that a later reattempt at connection succeeds. That's why it didn't explode like I expected.
+
