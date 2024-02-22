@@ -1,12 +1,11 @@
-you should install libsctp-dev
+you should install libsctp-dev if you haven't already
 
-for debian:
+eg for debian:
 ```bash
-# for netinet
 sudo apt-get install libsctp-dev
 ```
 
-and start the client after compiling with:
+and after compiling client and server. Start the server, and then launch the client with localhost as the argument, as follows:
 ```bash
 ./client.out "127.0.0.1"
 ```
